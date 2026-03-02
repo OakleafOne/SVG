@@ -1,0 +1,69 @@
+body {
+    background-color: #e0e5ec; /* En mjuk, modern ljusgrå färg */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text-card {
+    background: rgb(3, 1, 1);
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+@keyframes colorChange {
+    0% { color: #2c3e50; transform: scale(1); }
+    50% { color: #45b39d; transform: scale(1.05); }
+    100% { color: #2c3e50; transform: scale(1); }
+}
+
+.moving-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: colorChange 4s infinite ease-in-out;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.svg-check, .svg-decline {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s;
+}
+
+.svg-check:hover {
+    transform: scale(1.2) rotate(5deg);
+    filter: drop-shadow(0 0 8px rgba(69, 179, 157, 0.4));
+}
+
+.svg-decline:hover {
+    transform: scale(1.2) rotate(-5deg);
+    filter: drop-shadow(0 0 8px rgba(231, 76, 60, 0.4));
+}
+
+.accept-decline {
+    font-weight: bold;
+    color: #555;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
